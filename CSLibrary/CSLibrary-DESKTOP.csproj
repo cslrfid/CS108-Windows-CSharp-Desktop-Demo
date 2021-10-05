@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F5D0D75-9455-4797-9F63-28BE05221609}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSLibrary</RootNamespace>
+    <AssemblyName>CSLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="wclBluetoothFramework">
+      <HintPath>CSLibrary\HAL\btframework\wclBluetoothFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="wclCommon">
+      <HintPath>CSLibrary\HAL\btframework\wclCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="wclCommunication">
+      <HintPath>CSLibrary\HAL\btframework\wclCommunication.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSLibrary\BarcodeReader\ClassBarCode.cs" />
+    <Compile Include="CSLibrary\BarcodeReader\Constants\CSLibrary.Barcode.Constants.cs" />
+    <Compile Include="CSLibrary\BarcodeReader\Events\CSLibrary.Barcode.EventArgs.cs" />
+    <Compile Include="CSLibrary\BarcodeReader\Structures\CSLibrary.Barcode.Structures.cs" />
+    <Compile Include="CSLibrary\BluetoothIC\ClassBluetoothIC.cs" />
+    <Compile Include="CSLibrary\BluetoothProtocol\BTConnect.cs" />
+    <Compile Include="CSLibrary\BluetoothProtocol\BTReceive.cs" />
+    <Compile Include="CSLibrary\BluetoothProtocol\BTSend.cs" />
+    <Compile Include="CSLibrary\BluetoothProtocol\ClassBleDebug.cs" />
+    <Compile Include="CSLibrary\BluetoothProtocol\CSLibrary.Private.cs" />
+    <Compile Include="CSLibrary\CSLibrary.cs" />
+    <Compile Include="CSLibrary\HAL\btframework\ClassDebug.cs" />
+    <Compile Include="CSLibrary\HAL\btframework\ClassDeviceFinder.cs" />
+    <Compile Include="CSLibrary\HAL\btframework\CodeFileBLE.cs" />
+    <Compile Include="CSLibrary\Notification\ClassNotification.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.Country.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.FrequencyChannel.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.Inventory.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.MacRegister.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.OEM.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.Read.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.Select.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Private.Write.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Public.Algorithm.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Public.Country.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Public.FrequencyChannel.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Public.Operation.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Public.Power.cs" />
+    <Compile Include="CSLibrary\RFIDReader\ClassRFID.Public.Profile.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Constants\CSLibrary.Constants.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Constants\CSLibrary.Constants.Packet.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Constants\Intel.Constants.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Constants\SelectFlags.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Events\CSLibrary.Events.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Structures\CSLibrary.Structures.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Structures\CSLibrary.Structures.TagKill.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Structures\CSLibrary.Structures.TagLock.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Structures\CSLibrary.Structures.TagRead.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Structures\CSLibrary.Structures.TagWrite.cs" />
+    <Compile Include="CSLibrary\RFIDReader\Structures\Intel.Structures.cs" />
+    <Compile Include="CSLibrary\SiliconLabIC\ClassEvent.cs" />
+    <Compile Include="CSLibrary\SiliconLabIC\ClassSiliconLabIC.cs" />
+    <Compile Include="CSLibrary\Tools\ClassCRC16.cs" />
+    <Compile Include="CSLibrary\Tools\ClassFIFIQueue.cs" />
+    <Compile Include="CSLibrary\Tools\ClassTimer.cs" />
+    <Compile Include="CSLibrary\Tools\HexEncoding.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
