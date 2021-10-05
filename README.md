@@ -1,1 +1,1 @@
-# CS108-Windows-CSharp-Desktop-Demo
+# CS108 Windows 10 Desktop C# Bluetooth Demo App SDK
