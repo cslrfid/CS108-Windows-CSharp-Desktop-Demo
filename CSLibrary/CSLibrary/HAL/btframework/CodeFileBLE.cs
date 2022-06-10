@@ -181,6 +181,7 @@ namespace CSLibrary
             if (Value != null)
                 if (Value.Length > 0)
                 {
+                    //CSLibrary.Debug.WriteBytes("BT data received", Value);
                     CharacteristicOnValueUpdated(Value);
                 }
         }

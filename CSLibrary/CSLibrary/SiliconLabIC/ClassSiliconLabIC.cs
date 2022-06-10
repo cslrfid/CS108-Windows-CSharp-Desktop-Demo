@@ -49,9 +49,12 @@ namespace CSLibrary
             switch (pktType)
             {
                 case 0xb000:    // version
-                    _firmwareVersion = (uint)((data[10] << 16) | (data[11] << 8) | (data[12]));
-                    if (_firmwareVersion < 0x00010008)
-                        _firmwareOlderT108 = true;
+                    if (data.Length >= 12)
+                    {
+                        _firmwareVersion = (uint)((data[10] << 16) | (data[11] << 8) | (data[12]));
+                        if (_firmwareVersion < 0x00010008)
+                            _firmwareOlderT108 = true;
+                    }
                     return HighLevelInterface.BTWAITCOMMANDRESPONSETYPE.BTAPIRESPONSE;
 
                 case 0xb004:    // serial number
